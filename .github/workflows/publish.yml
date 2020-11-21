@@ -21,7 +21,7 @@ jobs:
           mkdir docs
           mkdir docs/kelp/
           cp book* docs/kelp/
-          rm -rf book
+          rm -rf -v !("docs")
       
       - name: Publish
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -30,3 +30,4 @@ jobs:
           BRANCH: master
           REPOSITORY_NAME: kelp-lang/kelp-lang.github.io
           CLEAN: false
+          FOLDER: ./
