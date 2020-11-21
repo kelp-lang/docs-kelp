@@ -15,11 +15,6 @@ jobs:
 
       - name: Run mdbook
         uses: peaceiris/actions-mdbook@v1.1.13
-        
-      - name: Rearrange
-        run: |
-          mkdir -p public/docs/kelp/
-          cp book* public/docs/kelp/
       
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3.7.3
