@@ -1,5 +1,5 @@
 # <img src="https://github.com/kelp-lang/kelp/blob/master/kelp.svg" width=120>elp programming language documentation
-<img src="https://travis-ci.org/kelp-lang/docs.svg?branch=master">
+![Build and publish](https://github.com/kelp-lang/docs-kelp/workflows/Build%20mdBook%20and%20publish/badge.svg)
 
 Kelp is a programming language. Multi-paradyme value-centric at that.
 
