@@ -22,5 +22,4 @@ jobs:
           repo: kelp-lang/kelp-lang.github.io
           target_branch: master
           build_dir: docs/kelp
-          commiter: docs-kelp CI
           commit_message: Update website according to docs-kelp repo
