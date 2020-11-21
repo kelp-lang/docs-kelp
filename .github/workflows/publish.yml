@@ -17,8 +17,8 @@ jobs:
         uses: peaceiris/actions-mdbook@v1.1.13
       
       - name: Publish
-        uses: ad-m/github-push-action@v0.6.0
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          github_token: $\\{{ secrets.GITHUB_TOKEN }}
-          repository: kelp-lang/kelp-lang.github.io
-          directory: ./docs/kelp/        
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_dir: ./docs/kelp/
+          publish_dir: book/
