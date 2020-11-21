@@ -19,6 +19,6 @@ jobs:
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          github_token: $\\{{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           destination_dir: ./docs/kelp/
           publish_dir: book/
