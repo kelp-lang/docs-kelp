@@ -17,9 +17,8 @@ jobs:
         uses: peaceiris/actions-mdbook@v1.1.13
       
       - name: Publish
-        uses: crazy-max/ghaction-github-pages@v2.2.0
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          repo: kelp-lang/kelp-lang.github.io
-          target_branch: master
-          build_dir: docs/kelp
-          commit_message: Update website according to docs-kelp repo
+          github_token: $\\{{ secrets.GITHUB_TOKEN }}
+          repository: kelp-lang/kelp-lang.github.io
+          directory: ./docs/kelp/        
