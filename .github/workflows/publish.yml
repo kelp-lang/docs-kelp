@@ -1,0 +1,23 @@
+name: Build mdBook and publish
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run mdbook
+        uses: peaceiris/actions-mdbook@v1.1.13
+      
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./docs/kelp
