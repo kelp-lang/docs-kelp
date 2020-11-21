@@ -18,10 +18,8 @@ jobs:
         
       - name: Rearrange
         run: |
-          mkdir docs
-          mkdir docs/kelp/
-          cp book* docs/kelp/
-          rm -rf -v !("docs")
+          mkdir public/docs/kelp/
+          cp book* public/docs/kelp/
       
       - name: Publish
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -30,4 +28,4 @@ jobs:
           BRANCH: master
           REPOSITORY_NAME: kelp-lang/kelp-lang.github.io
           CLEAN: false
-          FOLDER: ./
+          FOLDER: ./public
