@@ -22,10 +22,6 @@ jobs:
           cp book* public/docs/kelp/
       
       - name: Publish
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master
-          REPOSITORY_NAME: kelp-lang/kelp-lang.github.io
-          CLEAN: false
-          FOLDER: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
