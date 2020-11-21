@@ -18,7 +18,7 @@ jobs:
         
       - name: Rearrange
         run: |
-          mkdir public/docs/kelp/
+          mkdir -p public/docs/kelp/
           cp book* public/docs/kelp/
       
       - name: Publish
