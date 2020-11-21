@@ -13,8 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run mdbook
+      - name: Require mdbook
         uses: peaceiris/actions-mdbook@v1.1.13
+        
+      - name: Run mdbook
+        run: mdbook run
       
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3.7.3
