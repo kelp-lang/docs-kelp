@@ -15,10 +15,18 @@ jobs:
 
       - name: Run mdbook
         uses: peaceiris/actions-mdbook@v1.1.13
+        
+      - name: Rearrange
+        run: |
+          mkdir docs
+          mkdir docs/kelp/
+          cp book* docs/kelp/
+          rm -rf book
       
       - name: Publish
-        uses: peaceiris/actions-gh-pages@v3.7.3
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          destination_dir: ./docs/kelp/
-          publish_dir: book/
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          REPOSITORY_NAME: kelp-lang/kelp-lang.github.io
+          CLEAN: false
